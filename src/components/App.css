@@ -1,6 +1,11 @@
 /*!CONSTANTS*/
 :root {
-  --blue: deepskyblue;
+  --blue: #24b1ba;
+  --dark-blue: #0a3545;
+  --sky-blue: #14e3db;
+  --grey: #616469;
+  --light-grey: #eeeeee;
+  --dark-grey: #484a4d;
   --red: tomato;
   --yellow: yellow;
   --green: rgb(13, 185, 13);
@@ -29,10 +34,10 @@ body {
   align-items: center;
   width: 100%;
   height: 10vh;
-  background: grey;
+  background: var(--dark-blue);
 }
 .header__title {
-  color: white;
+  color: var(--sky-blue);
   font-style: italic;
 }
 
@@ -46,10 +51,23 @@ body {
   transition: all 0.3s ease;
   z-index: 10;
   background: white;
-  border-right: 1px solid black;
+  color: var(--grey);
+  border-right: 1px solid var(--grey);
 }
 .sidebar.active {
   transform: translateX(0px);
+}
+.sidebar__label {
+  font-weight: 600;
+  width: 100%;
+  padding-left: 40px;
+}
+.nav__link {
+  list-style: none;
+  cursor: pointer;
+}
+.nav__link:hover {
+  color: var(--dark-grey);
 }
 
 /*! hamburger button*/
@@ -95,7 +113,7 @@ body {
   height: 4px;
   transition-property: transform;
   border-radius: 4px;
-  background-color: #000;
+  background-color: white;
 }
 .hamburger__line:after,
 .hamburger__line:before {
@@ -137,8 +155,11 @@ body {
     position: relative;
     transform: translate(0, 0);
   }
-  .sidebar__button {
+  .hamburger {
     display: none;
+  }
+  .sidebar {
+    top: 0;
   }
 }
 /* .App-logo {
@@ -164,9 +185,10 @@ body {
   border: none;
   margin: 3px;
   transition: all 0.3 ease;
+  cursor: pointer;
 }
 .button:hover {
-  transform: scale(1.02);
+  font-weight: 600;
 }
 .button--green {
   background: var(--green);

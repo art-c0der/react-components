@@ -29,15 +29,16 @@ class App extends Component {
           </button>
           <h2 className="header__title">React Components Library</h2>
           <div className="header__buttons">
-            <button className="button button--white">Sing In</button>
+            <button className="button button--blue">Sing In</button>
             <button className="button button--white">Sing Up</button>
             <button className="button button--red">Log Out</button>
           </div>
         </header>
         <nav className="sidebar">
+          <div className="sidebar__label">Components</div>
           <ul>
-            <li className="nav__link">1</li>
-            <li className="nav__link">2</li>
+            <li className="nav__link">Buttons</li>
+            <li className="nav__link">Forms elements</li>
             <li className="nav__link">3</li>
             <li className="nav__link">4</li>
             <li className="nav__link">5</li>
