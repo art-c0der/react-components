@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+
+import rootRoutes from '../rootRoutes';
 
 import './App.css';
 
@@ -20,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <Router>
         <header className="header">
           <button className="hamburger" onClick={this.toggleSidebar}>
             <div className="hamburger__box">
@@ -34,18 +37,30 @@ class App extends Component {
             <button className="button button--red">Log Out</button>
           </div>
         </header>
-        <nav className="sidebar">
-          <div className="sidebar__label">Components</div>
-          <ul>
-            <li className="nav__link">Buttons</li>
-            <li className="nav__link">Forms elements</li>
-            <li className="nav__link">3</li>
-            <li className="nav__link">4</li>
-            <li className="nav__link">5</li>
-          </ul>
-        </nav>
-        <main className="main" onClick={this.hideSidebar} />
-      </>
+        <div className="container">
+          <nav className="sidebar">
+            <div className="sidebar__label">Components</div>
+            <ul>
+              <li className="nav__link">
+                <Link to="/">Home Page</Link>
+              </li>
+              <li className="nav__link">
+                <Link to="/buttons">Buttons</Link>
+              </li>
+              <li className="nav__link">3</li>
+              <li className="nav__link">4</li>
+              <li className="nav__link">5</li>
+            </ul>
+          </nav>
+          <main className="main" onClick={this.hideSidebar}>
+            <Switch>
+              {rootRoutes.map((item, index) => (
+                <Route key={index} path={item.path} component={item.component} exact={item.exact} />
+              ))}
+            </Switch>
+          </main>
+        </div>
+      </Router>
     );
   }
 }
