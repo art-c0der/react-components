@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
 import rootRoutes from '../rootRoutes';
+import Button from './Button';
 
 import './App.css';
 
@@ -32,9 +33,9 @@ class App extends Component {
           </button>
           <h2 className="header__title">React Components Library</h2>
           <div className="header__buttons">
-            <button className="button button--blue">Sing In</button>
-            <button className="button button--white">Sing Up</button>
-            <button className="button button--red">Log Out</button>
+            <Button value="Sing In" color="blue" shape="round" />
+            <Button value="Sing Up" color="green" shape="round" />
+            <Button value="Log Out" color="white" shape="round" disabled={true} title="Log Out" />
           </div>
         </header>
         <div className="container">
@@ -47,7 +48,9 @@ class App extends Component {
               <li className="nav__link">
                 <Link to="/buttons">Buttons</Link>
               </li>
-              <li className="nav__link">3</li>
+              <li className="nav__link">
+                <Link to="/forms">Forms elements</Link>
+              </li>
               <li className="nav__link">4</li>
               <li className="nav__link">5</li>
             </ul>

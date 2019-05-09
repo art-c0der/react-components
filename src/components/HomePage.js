@@ -9,7 +9,7 @@ export default class HomePage extends Component {
           <p>Useing this tiny library you can create your basic page elements.</p>
           <p>
             For any suggestions for improving this library, you can contact me using{' '}
-            <a href="https://github.com/Temu4">GitHub</a> or other masseges.
+            <a href="https://github.com/Temu4">GitHub</a> or other messengers.
           </p>
         </div>
       </div>
