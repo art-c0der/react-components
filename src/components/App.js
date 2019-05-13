@@ -51,7 +51,9 @@ class App extends Component {
               <li className="nav__link">
                 <Link to="/forms">Forms elements</Link>
               </li>
-              <li className="nav__link">4</li>
+              <li className="nav__link">
+                <Link to="/breadcrums">Breadcrums</Link>
+              </li>
               <li className="nav__link">5</li>
             </ul>
           </nav>

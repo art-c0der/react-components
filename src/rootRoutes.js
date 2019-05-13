@@ -1,6 +1,7 @@
 import HomePage from './components/HomePage';
 import ButtonsPage from './components/ButtonsPage';
 import FormsPage from './components/FormsPage';
+import BreadcrumsPage from './components/BreadcrumsPage';
 
 const rootRoutes = [
   {
@@ -16,6 +17,11 @@ const rootRoutes = [
   {
     path: '/forms',
     component: FormsPage,
+    exact: true
+  },
+  {
+    path: '/breadcrums',
+    component: BreadcrumsPage,
     exact: true
   }
 ];

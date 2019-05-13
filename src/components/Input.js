@@ -11,8 +11,8 @@ class Input extends Component {
       name,
       min = null,
       max = null,
-      minlength = null,
-      maxlength = null,
+      minLength = null,
+      maxLength = null,
       required = false,
       title,
       disabled = false
@@ -27,8 +27,8 @@ class Input extends Component {
           name={name}
           min={min}
           max={max}
-          minlength={minlength}
-          maxlength={maxlength}
+          minLength={minLength}
+          maxLength={maxLength}
           required={required}
           title={title}
           disabled={disabled}

@@ -362,6 +362,20 @@ form {
   margin: 0 5px;
 }
 
+/*! Breadcrums */
+.breadcrums {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+.breadcrums__link {
+  color: var(--grey);
+  text-decoration: none;
+}
+.breadcrums__slash {
+  padding: 0 5px;
+}
+
 /*! Users custom styles*/
 .purple {
   background: darkorchid;
