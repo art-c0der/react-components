@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Helmet} from 'react-helmet';
 
 import Button from './Button';
 
@@ -6,6 +7,9 @@ export default class ButtonsPage extends Component {
   render() {
     return (
       <>
+        <Helmet>
+          <title>Buttons</title>
+        </Helmet>
         <div className="row">
           <h2 className="row__label">General</h2>
           <div className="row__description">

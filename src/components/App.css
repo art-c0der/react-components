@@ -2,6 +2,7 @@
 :root {
   --blue: #007bff;
   --light-blue: #eaeff1;
+  --dark-blue: #042c57;
   --indigo: #6610f2;
   --pink: #e83e8c;
   --red: tomato;
@@ -66,6 +67,13 @@ code {
   display: flex;
   width: 100%;
 }
+.container__title {
+  text-align: center;
+  font-weight: 600;
+  color: var(--dark-grey);
+  width: 100%;
+  margin: 100px;
+}
 .row {
   display: flex;
   flex-flow: row wrap;
@@ -85,6 +93,36 @@ code {
   text-align: justify;
   width: 100%;
 }
+
+/*! PopUp menu*/
+.popup-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.popup-form {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-grey);
+  border: 1px solid white;
+  color: white;
+  z-index: 2;
+  border-radius: 5px;
+  height: 250px;
+  width: 400px;
+}
+.popup-form--singIn {
+  height: 150px;
+}
+
 /*! sidebar*/
 .sidebar {
   position: absolute;
@@ -107,11 +145,14 @@ code {
   color: var(--dark-grey);
   width: 100%;
   padding-left: 40px;
-  margin: 10px 0;
+  margin: 0 0 30px;
 }
 .nav__link {
   list-style: none;
   margin-bottom: 8px;
+}
+.nav__link:first-child {
+  margin-bottom: 20px;
 }
 .nav__link a {
   color: var(--grey);
@@ -122,6 +163,11 @@ code {
   color: var(--dark-grey);
 }
 
+.error {
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+}
 /*! hamburger button*/
 .hamburger {
   font: inherit;
@@ -222,25 +268,11 @@ code {
     display: none;
   }
 }
-/* .App-logo {
-  animation: spline infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@keyframes spline {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 
 /*! Basic styles for components */
 .button {
   border: none;
-  box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 1);
+  box-shadow: 1px 1px 4px 0px rgba(255, 255, 255, 1);
   transition: all 0.3 ease;
   cursor: pointer;
   min-width: 90px;
@@ -261,58 +293,58 @@ code {
 .button--green {
   background: var(--green);
   color: white;
-  box-shadow: 2px 2px 5px 0px var(--green);
+  box-shadow: 1px 1px 4px 0px var(--green);
 }
 .button--blue {
   background: var(--blue);
   color: white;
-  box-shadow: 2px 2px 5px 0px var(--blue);
+  box-shadow: 1px 1px 4px 0px var(--blue);
 }
 .button--red {
   background: var(--red);
   color: white;
-  box-shadow: 2px 2px 5px 0px var(--red);
+  box-shadow: 1px 1px 4px 0px var(--red);
 }
 .button--orange {
   background: var(--orange);
-  box-shadow: 2px 2px 5px 0px var(--orange);
+  box-shadow: 1px 1px 4px 0px var(--orange);
 }
 .button--indigo {
   background: var(--indigo);
   color: white;
-  box-shadow: 2px 2px 5px 0px var(--indigo);
+  box-shadow: 1px 1px 4px 0px var(--indigo);
 }
 .button--pink {
   background: var(--pink);
-  box-shadow: 2px 2px 5px 0px var(--pink);
+  box-shadow: 1px 1px 4px 0px var(--pink);
 }
 .button--teal {
   background: var(--teal);
   color: white;
-  box-shadow: 2px 2px 5px 0px var(--teal);
+  box-shadow: 1px 1px 4px 0px var(--teal);
 }
 .button--cyan {
   background: var(--cyan);
   color: white;
-  box-shadow: 2px 2px 5px 0px var(--cyan);
+  box-shadow: 1px 1px 4px 0px var(--cyan);
 }
 .button--black {
   background: var(--black);
   color: white;
-  box-shadow: 2px 2px 5px 0px var(--black);
+  box-shadow: 1px 1px 4px 0px var(--black);
 }
 .button--grey {
   background: var(--grey);
   color: white;
-  box-shadow: 2px 2px 5px 0px var(--grey);
+  box-shadow: 1px 1px 4px 0px var(--grey);
 }
 .button--yellow {
   background: var(--yellow);
-  box-shadow: 2px 2px 5px 0px var(--yellow);
+  box-shadow: 1px 1px 4px 0px var(--yellow);
 }
 .button--white {
   background: var(--white);
-  box-shadow: 2px 2px 5px 0px var(--white);
+  box-shadow: 1px 1px 4px 0px var(--white);
 }
 .button--large {
   height: 45px;
@@ -367,12 +399,16 @@ form {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
 }
 .breadcrums__link {
   color: var(--grey);
   text-decoration: none;
 }
 .breadcrums__slash {
+  cursor: default;
+  color: var(--grey);
   padding: 0 5px;
 }
 

@@ -10,7 +10,8 @@ export default class Button extends Component {
       type = null,
       disabled = false,
       customClassName = '',
-      title = null
+      title = null,
+      onClick
     } = this.props;
     return (
       <button
@@ -18,6 +19,7 @@ export default class Button extends Component {
         type={type}
         disabled={disabled}
         title={title}
+        onClick={onClick}
       >
         {value}
       </button>
