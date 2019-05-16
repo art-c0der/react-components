@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## React components library
-[#Demo](https://codesandbox.io/s/silly-cannon-r1hip)
+[#Demo](https://codesandbox.io/s/reactcomponents-r1hip)
 
 Useing this tiny library you can create your basic page elements. Also there is implemented a simple authorized system (with LocalStorage).
 
